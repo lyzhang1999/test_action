@@ -1,0 +1,19 @@
+name: "Build Main He3"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-linux:
+    # ubuntu need install binutils and libfuse2
+    runs-on: [self-hosted, X64, Linux]
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3.6.0
+
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v3.5.1
+        with:
+          node-version: 16
+          cache: "npm"
