@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v3.6.0
+        uses: actions/checkout@latest
 
       - name: Install Node.js, NPM and Yarn
         uses: actions/setup-node@v3.5.1
